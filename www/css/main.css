@@ -1,0 +1,111 @@
+/*Css main style*/
+/*Definova stylov pre prehliadac mensi ako 900px*/
+@media (max-width: 900px) {
+	/*This write style*/
+}
+
+/*Definovanie stylov pre zobrazenie vadsie ako 481px a mensie ako 1024px a orientacia na  vysku*/
+@media (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+	/*This write style*/
+}
+
+/*Definovanie style pre zobrazenie vedsie ako 481px a mensie ako 1024px a orientacia na sirku*/
+@media (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+	/*This write style*/
+}
+
+/*Font*/
+@import url("../font/style.css");
+
+html { height: 100%; }
+body {
+	height: 100%;
+	background-color: #eee;
+}
+
+#wrapper {
+	min-height: 100%;
+	height: auto !important;
+	margin: 0 auto -60px;
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+.content {
+	background-color: #000;
+}
+
+.mainJumbotron {
+	text-align: center;
+	padding-top: 150px;
+	padding-bottom: 150px;
+	color: #bbb;
+	height: auto;
+}
+
+.mainJumbotron-blog {
+	text-align: center;
+	color: #bbb;
+	height: auto;
+}
+
+.blog {
+	text-align: center;
+	padding-top: 20px;
+}
+
+.right { border-right: 2px solid #0000ff; }
+.no-center { text-align: left !important; }
+
+.mainContacts {
+	text-align: center;
+}
+
+.btn-socialLarge {
+	margin: 0 auto 30px;
+	color: #fff;
+	border-radius: 15%;
+	text-align: center;
+	font-size: 88px;
+	width: 124px;
+	height: 124px;
+	line-height: 120px;
+	border: 1px solid #888;
+	font-family: 'Fira Sans', sans-serif;
+}
+
+.btn-twitter { background-color: #55acee; }
+.btn-facebook { background-color: #445a88; }
+.btn-googlePlus {
+	background-color: #ca3523;
+	font-size: 68px;
+	line-height: 100px;
+}
+
+.btn-twitter:hover {
+	background-color: #4c9ad6;
+	color: #fff;
+}
+
+.btn-googlePlus:hover {
+	background-color: #b52f1f;
+	color: #fff;
+}
+
+.btn-facebook:hover {
+	background-color: #30487b;
+	color: #fff;
+}
+
+footer {
+	background-color: #555;
+	color: #ccc;
+	height: 60px;
+	padding: 0px;
+	margin: 0px;
+}
+
+footer > div > p { margin: 20px 0; }
+footer > div > p > a:hover, footer > div > p > a:visited, footer > div > p > a:active { color: #777; }
