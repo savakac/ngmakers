@@ -18,7 +18,7 @@ class BlogPresenter extends BasePresenter
 	public function __construct(Nette\Database\Context $database)
 	{
 		$this->database = $database;
-		$this->limitTable = 1;
+		$this->limitTable = 7;
 	}
 
 	public function renderDefault()
