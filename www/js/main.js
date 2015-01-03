@@ -4,24 +4,39 @@ $(document).ready(function(){
 
 });
 
-$(function(){
-
-});
-
 function activClassPage() {
-	var active = document.getElementById("title");
+	var active = document.title;
+	var text = "";
+	var i;
 
-	if (active == "Úvod") {
+	for (i = 0; i < active.length; i++) {
+		if (active[i] == ' ') break;
+		else text += active[i];
+	}
+
+	if (text == "Úvod") {
 		$(document).ready(function(){
-			$("#active1").addClass("active");
+			$("#active1").parent().addClass("active");
 		});
-	} else if (active == "Blog") {
+	} else if (text == "Blog") {
 		$(document).ready(function(){
-			$("#active2").addClass("active");
+			$("#active2").parent().addClass("active");
 		});
-	} else {
+	} else if (text == "Kontakt") {
 		$(document).ready(function(){
-			$("#active2").addClass("active");
+			$("#active3").parent().addClass("active");
 		});
 	}
+	else {
+		$(document).ready(function(){
+			$("#active1").parent().removeClass("active");
+			$("#active2").parent().removeClass("active");
+			$("#active3").parent().removeClass("active");
+		});
+	}
+}
+
+function alertMessage() {
+	alert("Alert message!");
+	document.getElementById("out").innerHTML = "This is out.";
 }
