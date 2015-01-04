@@ -7,15 +7,11 @@
 		<div class="container">
 			<h1>Gmakers.eu</h1>
 			<p>Blog</p>
-			<a n:href="Blog:create" n:if="$user->loggedIn">Pridat novy prispevok</a>
 		</div>
 	</div>
 	<div class="container blog">
-		<div class="row" n:foreach="$blog_contents as $blog_content">
-			<h1><a n:href="Blog:show $blog_content->id">{$blog_content->title}</a></h1>
-			<p>{$blog_content->create_post|date:'F j, Y' }</p>
-			<div>{$blog_content->content}</div>
-		</div>
+		<p>Novy prispevok</p>
+		{control postForm}
 	</div>
 
 {/block}
