@@ -20,8 +20,7 @@ nette:
 	session:
 		expiration: 14 days
 
-
 services:
-	- App\Model\UserManager
 	- App\RouterFactory
 	router: @App\RouterFactory::createRouter
+	authenticator: MyAutentificator

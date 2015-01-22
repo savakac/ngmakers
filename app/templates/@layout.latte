@@ -73,11 +73,14 @@
                         <button type="submit" class="btn btn-default">Submit</button>
                     </form>
                     {* Log in / log out *}
-                    <ul class="nav navbar-nav navbar-right">
-			<li>
-                      	 	 <button type="button" class="btn btn-default navbar-btn">Sign in</button>
-                       		 <p class="navbar-text">Signed in as Mark</p>
-			</li>
+                    <ul class="nav navbar-nav navbar-right login">
+                        <li>
+                            {if !$user->loggedIn}
+                                <button type="button" class="btn btn-default navbar-btn"><a n:href="Sign:in">Sign in</a></button>
+                            {else}
+                                <p class="navbar-text"><a n:href="Sign:out">Signed in as Mark</a></p>
+                            {/if}
+                        </li>
                     </ul>
                 </div> {* Navbar collapse *}
             </div> {* container fluid *}

@@ -41,7 +41,8 @@ class BlogPresenter extends BasePresenter
 	protected function createComponentPostForm()
 	{
 		if (!$this->user->isLoggedIn()) {
-			$this->error('Pre pridavanie alebo editovanie prispevku musite byt prihlaseny.');
+			// $this->error('Pre pridavanie alebo editovanie prispevku musite byt prihlaseny.');
+			$this->redirect('Sign:in');
 		} else {
 			$form = new Nette\Application\UI\Form;
 
@@ -61,6 +62,10 @@ class BlogPresenter extends BasePresenter
 		$values = $form->getValues();
 		$id = $this->getParameter("id");
 
+		if (!$this->user->isLoggedIn()) {
+			$this->error('Pre pridavanie alebo editovanie prispevku musite byt prihlaseny.');
+		}
+
 		if ($id) {
 			$contents = $this->database->table('blog_content')->get($id);
 			$contents->update($values);
@@ -76,7 +81,8 @@ class BlogPresenter extends BasePresenter
 	public function actionEdit($id)
 	{
 		if (!$this->user->isloggedIn()) {
-			$this->error('Pre pridavanie alebo editaovanie prispevku musite byt prihlaseny.');
+			// $this->error('Pre pridavanie alebo editaovanie prispevku musite byt prihlaseny.');
+			$this->redirect('Sign:in');
 		} else {
 			$contents = $this->database->table('blog_content')->get($id);
 			if (!$contents) {
@@ -84,6 +90,13 @@ class BlogPresenter extends BasePresenter
 			}
 			$this['postForm']->setDefaults($contents->toArray());
 		}
+	}
+
+	public function actionOut()
+	{
+		$this->getUser()->logout();
+		$this->flashMessage('Boli ste odhlaseny.');
+		$this->redirect('Homepage:defualt');
 	}
 
 }
