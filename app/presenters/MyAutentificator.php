@@ -20,11 +20,11 @@ class MyAutentificator extends Nette\Object implements NS\IAuthenticator
 			throw new NS\AuthenticationException('User not found.');
 		}
 
-		if (!NS\Passwords::verify($password, $row->password)) {
+		if (NS\Passwords::verify($password, $row->password)) {
 			throw new NS\AuthenticationException('Invalid password.');
 		}
 
-		return new NS\Identity($row->id, $row->role);
+		return new NS\Identity($row->id, $row->rola);
 	}
 
 }

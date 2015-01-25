@@ -46,8 +46,8 @@ class BlogPresenter extends BasePresenter
 		} else {
 			$form = new Nette\Application\UI\Form;
 
-			$form->addText('title', 'Titulok: ')->setRequired();
-			$form->addTextArea('content', 'Obsah: ')->setRequired();
+			$form->addText('title', 'Titulok: ', 101)->setRequired();
+			$form->addTextArea('content', 'Obsah: ', 100, 10)->setRequired();
 
 			$form->addSubmit('send', 'Ulozit a publikovat');
 			$form->onSuccess[] = $this->postFormSucceeded;
