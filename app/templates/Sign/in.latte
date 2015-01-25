@@ -1,6 +1,35 @@
 {block content}
-<h1 n:block=title>Sign in</h1>
 
-{control signInForm}
+	<div style="display: none" n:block="title">Sign in</div>
 
-{* or use {include '../components/form.latte', form => signInForm} *}
+	{* Content *}
+	<div class="jumbotron content mainJumbotron">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 right">
+					<h1>Gmakers.eu</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum ac pharetra nunc congue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum ac pharetra nunc congue.</p>
+					<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container mainContacts">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4">
+				{control signInForm}
+			</div>
+		</div>
+	</div>
+
+{/block}
+
+{block scripts}
+{include parent}
+
+{/block}
+
+
+{block head}
+
+{/block}
