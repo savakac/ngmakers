@@ -53,6 +53,10 @@ class SignPresenter extends BasePresenter
 		}
 	}
 
+	public function crateUser() {
+		
+	}
+
 
 	public function actionOut()
 	{

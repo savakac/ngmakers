@@ -1,6 +1,6 @@
 {block content}
 
-	<div style="display: none" n:block="title">Sign in</div>
+	<div style="display: none" n:block="title">Registracia</div>
 
 	{* Content *}
 	<div class="jumbotron content mainJumbotron">
@@ -17,9 +17,8 @@
 	<div class="container mainContacts">
 		<div class="row">
 			<div class="col-md-4 col-md-offset-4">
-				{control signInForm}
+				{control registrationForm}
 			</div>
-			<p><a n:href="Registration:default" n:if="$user->loggedIn">Create user.</a></p>
 		</div>
 	</div>
 
