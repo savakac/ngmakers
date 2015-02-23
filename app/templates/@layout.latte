@@ -63,6 +63,9 @@
                                 <li class="divider"></li>
                                 <li><a href="#">Software</a></li>
                                 <li><a href="#">Database</a></li>
+                                <li class="divider" n:if="$user->loggedIn"></li>
+                                <li><a n:href="Registration:default" n:if="$user->loggedIn">Create user</a></li>
+                                <li><a n:href="Sign:out" n:if="$user->loggedIn">Log out</a></li>
                             </ul>
                         </li>
                     </ul>

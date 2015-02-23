@@ -8,7 +8,7 @@
 			<div class="row">
 				<div class="col-md-12 right">
 					<h1>Gmakers.eu</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum ac pharetra nunc congue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum ac pharetra nunc congue.</p>
+					<p>Vítajte na stránkach gmakers.eu. Zaoberáme sa tvorbou webových aplikácií, registráciou domén, e-shopou.</p>
 					<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
 				</div>
 			</div>
@@ -17,7 +17,12 @@
 	<div class="container mainContacts">
 		<div class="row">
 			<div class="col-md-4 col-md-offset-4">
-				{control registrationForm}
+				<form n:name=registrationForm class="form">
+					<p><label n:name=username>Username: <input n:name=username size=20></label></p>
+					<p><label n:name=password>Password: <input n:name=password size=20></label></p>
+					<p><label n:name=rola>Rola: <input n:name=rola size=20></label></p>
+					<p><input n:name=send class="btn btn-default"></p>
+				</form>
 			</div>
 		</div>
 	</div>

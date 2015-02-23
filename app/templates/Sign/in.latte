@@ -8,7 +8,7 @@
 			<div class="row">
 				<div class="col-md-12 right">
 					<h1>Gmakers.eu</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum ac pharetra nunc congue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum ac pharetra nunc congue.</p>
+					<p>Vítajte na stránkach gmakers.eu. Zaoberáme sa tvorbou webových aplikácií, registráciou domén, e-shopou.</p>
 					<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
 				</div>
 			</div>
@@ -17,7 +17,12 @@
 	<div class="container mainContacts">
 		<div class="row">
 			<div class="col-md-4 col-md-offset-4">
-				{control signInForm}
+				<form n:name=signInForm class="form">
+					<p><label n:name=username>Username: <input n:name=username size=20></label></p>
+					<p><label n:name=password>Password: <input n:name=password size=20></label></p>
+					<p><label n:name=remember>Keep me signed in: <input n:name=remember></label></p>
+					<p><input n:name=send class="btn btn-default"></p>
+				</form>
 			</div>
 			<p><a n:href="Registration:default" n:if="$user->loggedIn">Create user.</a></p>
 		</div>
