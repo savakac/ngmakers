@@ -25,13 +25,17 @@ class RegistrationPresenter extends BasePresenter
 	 */
 	protected function createComponentRegistrationForm()
 	{
+		// getElementPrototype()->class() pridanie triedy celemu elementu
+		// getControlPrototype()->class() pridanie triedy control komponente
+		// getLabelPrototype()->class() pridanie triedy label komponente
 		if (!$this->user->isLoggedIn()) {
-			$htis->redirect('Sign:in');
+			$this->redirect('Sign:in');
 		} else {
 			$form = new Nette\Application\UI\Form;
-			$form->addText('username', 'Username:')->setRequired('Please enter your username.');
-			$form->addPassword('password', 'Password:')->setRequired('Please enter your password.');
-			$form->addText('rola', 'Rola')->setRequired('Please enter your rola');
+			$form->getElementPrototype()->class('formular');
+			$form->addText('username', 'Username:')->getControlPrototype()->class('formular-component')->setRequired('Please enter your username.');
+			$form->addPassword('password', 'Password:')->getControlPrototype()->class('formular-component')->setRequired('Please enter your password.');
+			$form->addSelect('rola', 'rola', array('admin' => 'admin', 'user' => 'user'))->getControlPrototype()->class('formular-component')->setRequired('Please select your rola');
 			$form->addSubmit('send', 'Sign in');
 
 			// call method signInFormSucceeded() on success
