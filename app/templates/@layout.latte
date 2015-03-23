@@ -65,10 +65,7 @@
                                 <li><a href="#">Database</a></li>
                                 <li class="divider" n:if="$user->loggedIn"></li>
                                 <li><a n:href="Registration:default" n:if="$user->loggedIn">Create user</a></li>
-<<<<<<< HEAD
                                 <li><a n:href="Sign:out" n:if="$user->loggedIn">Log out</a></li>
-=======
->>>>>>> 68b16306c5492f03bae17d1e3ea6993d09e1b4e8
                             </ul>
                         </li>
                     </ul>
@@ -79,15 +76,11 @@
                         <button type="submit" class="btn btn-default">Submit</button>
                     </form>
                     {* Log in / log out *}
-                    <ul class="nav navbar-nav navbar-right login">
-                        <li>
-                            {if !$user->loggedIn}
-                                <button type="button" class="btn btn-default navbar-btn"><a n:href="Sign:in">Sign in</a></button>
-                            {else}
-                                <p class="navbar-text"><a n:href="Sign:out">Log out</a></p>
-                            {/if}
-                        </li>
-                    </ul>
+                    {if !$user->loggedIn}
+                        <a class="btn btn-default navbar-right login-button" n:href="Sign:in">Sign in</a>
+                    {else}
+                        <a class="btn btn-default navbar-right login-button" n:href="Sign:out">Log out</a>
+                    {/if}
                 </div> {* Navbar collapse *}
             </div> {* container fluid *}
         </nav>
