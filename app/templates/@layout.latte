@@ -9,7 +9,6 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{$basePath}/css/main.css">
     <link rel="icon" href="{$basePath}/images/icon.png">
 
     <title>{ifset #title}{include title|striptags} - {/ifset}gmakers.eu</title>
@@ -30,7 +29,7 @@
     {block head}{/block}
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbarRight">
 {* Header *}
 <div id="wrapper">
     <header>
@@ -86,7 +85,11 @@
         </nav>
     </header>
 
+    <div id="push-top"></div>
+    
     {include content}
+
+    <div id="push-botton"></div>
 
     {* End wraper *}
     </div>

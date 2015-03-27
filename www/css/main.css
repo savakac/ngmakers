@@ -18,10 +18,7 @@
 @import url("../font/style.css");
 
 html { height: 100%; }
-body {
-	height: 100%;
-	background-color: #eee;
-}
+body { height: 100%; }
 
 #wrapper {
 	min-height: 100%;
@@ -30,13 +27,9 @@ body {
 }
 
 /*Navigacna lista*/
-.navbar {
-	margin-bottom: 20px;
-}
-
-.login-button {
-	margin: 7px;
-}
+.navbar { margin-bottom: 20px; }
+.navbar-brand { color: #FF9900 !important; }
+.login-button { margin: 7px; }
 
 .login > li {
 	margin-right: 20px;
@@ -50,20 +43,13 @@ body {
 
 .mainJumbotron {
 	text-align: center;
-	padding-top: 150px;
-	padding-bottom: 150px;
+	margin-bottom: 10px;
+	padding-top: 120px;
+	padding-bottom: 90px;
 	color: #bbb;
-	height: auto;
-}
-
-.mainJumbotron-blog {
-	text-align: center;
-	color: #bbb;
-	height: auto;
 }
 
 /*Referencie*/
-
 #carousel-referencie { margin: 20px 0; }
 #carousel-referencie .carousel-control { width: 30px; }
 
@@ -80,6 +66,7 @@ body {
 	text-align: center;
 	/*padding-bottom: 100px;*/
 	min-height: 240px;
+	margin-top: 100px;
 }
 
 .btn-socialLarge {
@@ -117,6 +104,9 @@ body {
 	background-color: #30487b;
 	color: #fff;
 }
+
+#push-top { height: 51px; }
+#push-botton { height: 120px; }
 
 footer {
 	background-color: #555;
